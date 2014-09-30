@@ -39,6 +39,7 @@ def checksum (upc):
     a2 = a1*3 + checksum(2)+checksum(4)+checksum(6)+checksum(8)+checksum(10)
     a3 = a2 % 10
     result = 10 - a3
+    #test
     # convert string to array
     # hint: use the list function
 

@@ -51,6 +51,8 @@ make a test change
         # assign grade to letter_grade
     elif type(grade) is int:
         integer= 0
+        tuple= 0
+        
         print("mark") # remove this line once the code is implemented
         # check that grade is in the accepted range
         # convert the numeric grade to a letter grade

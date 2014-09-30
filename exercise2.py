@@ -35,7 +35,10 @@ def checksum (upc):
 
     # check length of string
     # raise ValueError if not 12
-
+    a1 = checksum(1)+checksum(3)+checksum(5)+checksum(7)+checksum(9)+checksum(11)
+    a2 = a1*3 + checksum(2)+checksum(4)+checksum(6)+checksum(8)+checksum(10)
+    a3 = a2 % 10
+    result = 10 - a3
     # convert string to array
     # hint: use the list function
 

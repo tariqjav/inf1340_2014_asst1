@@ -44,7 +44,7 @@ def grade_to_gpa(grade):
     gpa = 0.0
 
 
-
+    
     if type(grade) is str:
         print ("letter") # remove this line once the code is implemented
         # check that the grade is one of the accepted values

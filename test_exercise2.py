@@ -13,7 +13,7 @@ __status__ = "Prototype"
 # imports one per line
 
 # imports one per line
-import pytest
+import exercise1
 from exercise2 import checksum
 
 
@@ -31,11 +31,11 @@ def test_input():
     """
     Inputs that are the incorrect format and length
     """
-    with pytest.raises(TypeError):
+    with exercise1.raises(TypeError):
         checksum(1.0)
         checksum(786936224306)
 
-    with pytest.raises(ValueError):
+    with exercise1.raises(ValueError):
         checksum("1")
         checksum("1234567890")
 

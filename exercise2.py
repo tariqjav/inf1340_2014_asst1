@@ -2,6 +2,8 @@
 
 """
     Perform a checksum on a UPC
+    This program will accept a string and check if it is a Universal Product Code (UPC) by turing it into a list
+    and using the definition function of UPC. 
 
     Assignment 1, Exercise 2, INF1340 Fall 2014
 """

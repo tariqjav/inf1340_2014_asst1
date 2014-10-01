@@ -41,7 +41,7 @@ def grade_to_gpa(grade):
     # assign the two types of parameters, integer or string
     letter_grade = "A+", "A", "A-", "B+", "B", "B-", "FZ"
 
-    mark_to_letter=list(range(0, 101))
+    mark_to_letter = list(range(0, 101))
 
     if type(grade) is str:
 

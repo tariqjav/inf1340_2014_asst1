@@ -105,6 +105,27 @@ def grade_to_gpa(grade):
             grade = "FZ"
 
         # assign the value to letter_grade
+
+        if grade == "A+":
+             gpa = 4.0
+
+        elif grade == "A":
+            gpa = 4.0
+
+        elif grade == "A-":
+            gpa = 3.7
+
+        elif grade == "B+":
+            gpa = 3.3
+
+        elif grade == "B":
+            gpa = 3.0
+
+        elif grade == "B-":
+            gpa = 2.7
+
+        elif grade == "FZ":
+            gpa = 0.0
         # hint: letter_grade = mark_to_letter(grade)
     else:
         # raise a TypeError exception

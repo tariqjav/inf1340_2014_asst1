@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 """ Assignment 1, Exercise 1, INF1340, Fall, 2014. Grade to gpa conversion
 
 This module contains one function grade_to_gpa. It can be passed a parameter
@@ -8,7 +9,6 @@ other inputs will result in an error.
 
 Example:
     $ python exercise1.py
-
 """
 
 __author__ = 'Susan Sim'

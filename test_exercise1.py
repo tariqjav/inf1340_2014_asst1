@@ -70,18 +70,31 @@ def test_percentage_grade():
     assert grade_to_gpa(0) == 0.0
 
     # test for invalid values
-    with pytest.raises(ValueError):
+    with exercise1.raises(ValueError):
         grade_to_gpa(101)
         grade_to_gpa(-1)
         grade_to_gpa(-50)
         grade_to_gpa(120)
 
 
+# tests for float inputs that are invalid
 def test_float_input():
     """
     Float inputs
     """
     with exercise1.raises(TypeError):
         grade_to_gpa(82.5)
+        grade_to_gpa(-30.07)
+        grade_to_gpa(50600)
 
-# add functions for any other tests
+
+# tests for string inputs that are invalid
+def test_string_input():
+    """
+    String inputs
+    """
+    with exercise1.raises(ValueError):
+        grade_to_gpa("Sentences")
+        grade_to_gpa("This is")
+        grade_to_gpa("Invalid")
+

@@ -128,5 +128,3 @@ def grade_to_gpa(grade):
 
     # assign the value to gpa
     return gpa
-
-

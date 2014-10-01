@@ -3,7 +3,7 @@
 """
     Perform a checksum on a UPC
     This program will accept a string and check if it is a Universal Product Code (UPC) by turing it into a list
-    and using the definition function of UPC. 
+    and using the definition function of UPC.
 
     Assignment 1, Exercise 2, INF1340 Fall 2014
 """
@@ -46,21 +46,24 @@ def checksum (upc):
 
     # convert string to array
     # hint: use the list function
-    checksum = list(upc)
+    upc = map(int,upc)
     #Put the string with 12 digits into a list. 
-    
+
     # generate checksum using the first 11 digits provided
-    a1 = checksum(1)+checksum(3)+checksum(5)+checksum(7)+checksum(9)+checksum(11)
+    a1 = upc[0]+upc[2]+upc[4]+upc[6]+upc[8]+upc[10]
     #1. Adding the odd number digits, and multiple by three.
-    a2 = a1*3 + checksum(2)+checksum(4)+checksum(6)+checksum(8)+checksum(10)
+    a2 = a1*3 + upc[1]+upc[3]+upc[5]+upc[7]+upc[9]
     #2. Adding the even number digits.
     a3 = a2 % 10
     #3. Calcultating the modulo ten.
     result = 10 - a3
     #4. Subtrating by ten and generating the result.
     # check against the the twelfth digit
-    if result == checksum(12):
+    if result == upc[11]:
            return True
     # return True if they are equal, False otherwise
 
     return False
+
+
+print checksum("786936224306")

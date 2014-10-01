@@ -25,7 +25,7 @@ __status__ = "Prototype"
 def grade_to_gpa(grade):
     """
     Returns the UofT Graduate GPA for a given grade.
-    Testing 
+    Testing
     :param:
         grade (integer or string): Grade to be converted
             If integer, accepted values are 0-100.
@@ -40,10 +40,13 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-    letter_grade = ""
-    gpa = 0.0
+    letter_grade = "A+", "A", "A-", "B+", "B", "B-", "FZ"
 
-    #TESTESTEST
+    mark_to_letter= list(range(0, 101))
+
+
+
+
 
     if type(grade) is str:
         print ("letter") # remove this line once the code is implemented

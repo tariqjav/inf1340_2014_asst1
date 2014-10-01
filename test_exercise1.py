@@ -10,12 +10,12 @@ __license__ = "MIT License"
 
 __status__ = "Prototype"
 
-# imports one per line
 import exercise1
 
 from exercise1 import grade_to_gpa
 
 
+# tests for valid values
 def test_letter_grade():
     """
     Letter grade inputs
@@ -27,10 +27,14 @@ def test_letter_grade():
     assert grade_to_gpa("B") == 4.0
     assert grade_to_gpa("B-") == 4.0
     assert grade_to_gpa("FZ") == 4.0
-    
+
+    # tests for invalid values
     with exercise1.raises(ValueError):
         grade_to_gpa("q")
-    # add more tests for invalid values
+        grade_to_gpa("E")
+        grade_to_gpa("BP")
+        grade_to_gpa("z")
+
 
 
 def test_percentage_grade():
@@ -65,6 +69,7 @@ def test_percentage_grade():
     assert grade_to_gpa(37) == 0.0
     assert grade_to_gpa(0) == 0.0
 
+    # test for invalid values
     with pytest.raises(ValueError):
         grade_to_gpa(101)
         grade_to_gpa(-1)

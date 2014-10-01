@@ -19,8 +19,6 @@ __license__ = "MIT License"
 
 __status__ = "Prototype"
 
-# imports one per line
-
 
 def grade_to_gpa(grade):
     """
@@ -41,23 +39,19 @@ def grade_to_gpa(grade):
     """
 
     # assign the two types of parameters, integer or string
-
     letter_grade = "A+", "A", "A-", "B+", "B", "B-", "FZ"
 
-    mark_to_letter= list(range(0, 101))
+    mark_to_letter=list(range(0, 101))
 
     if type(grade) is str:
 
       # check to see if the parameter matches
-
         if grade in letter_grade:
             pass
 
-
         # assign grade to letter_grade
-
         if grade == "A+":
-             gpa = 4.0
+            gpa = 4.0
 
         elif grade == "A":
             gpa = 4.0
@@ -79,13 +73,11 @@ def grade_to_gpa(grade):
 
     elif type(grade) is int:
 
-        #check to see if the parameter matches
-
+        # check to see if the parameter matches
         if grade in mark_to_letter:
             pass
 
         # convert the numeric grade to a letter grade
-
         if grade in list(range (90, 101)):
             grade = "A+"
 
@@ -108,7 +100,6 @@ def grade_to_gpa(grade):
             grade = "FZ"
 
         # assign the value to letter_grade
-
         if grade == "A+":
              gpa = 4.0
 
@@ -132,8 +123,10 @@ def grade_to_gpa(grade):
     else:
         # raise a TypeError exception
         print ("Error")
+
         raise TypeError("Invalid type passed as parameter")
+
     # assign the value to gpa
     return gpa
 
-print(grade_to_gpa(5))
+

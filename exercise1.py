@@ -40,18 +40,19 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
+    # assign the two types of parameters, integer or string
+
     letter_grade = "A+", "A", "A-", "B+", "B", "B-", "FZ"
 
     mark_to_letter= list(range(0, 101))
 
-
-
-
-
     if type(grade) is str:
-        """if grade in letter_grade:
+
+      # check to see if the parameter matches
+
+        if grade in letter_grade:
             pass
-           """
+
 
         # assign grade to letter_grade
 
@@ -75,11 +76,13 @@ def grade_to_gpa(grade):
 
         elif grade == "FZ":
             gpa = 0.0
+
     elif type(grade) is int:
 
+        #check to see if the parameter matches
 
-        """if grade in mark_to_letter:
-            pass"""
+        if grade in mark_to_letter:
+            pass
 
         # convert the numeric grade to a letter grade
 
@@ -126,36 +129,11 @@ def grade_to_gpa(grade):
 
         elif grade == "FZ":
             gpa = 0.0
-        # hint: letter_grade = mark_to_letter(grade)
     else:
         # raise a TypeError exception
         print ("Error")
         raise TypeError("Invalid type passed as parameter")
-
-    # write a long if-statement to convert letter_grade
     # assign the value to gpa
-
-    if letter_grade == "A+":
-        gpa = 4.0
-
-    elif letter_grade == "A":
-        gpa = 4.0
-
-    elif letter_grade == "A-":
-        gpa = 3.7
-
-    elif letter_grade == "B+":
-        gpa = 3.3
-
-    elif letter_grade == "B":
-        gpa = 3.0
-
-    elif letter_grade == "B-":
-        gpa = 2.7
-
-    elif letter_grade == "FZ":
-        gpa = 0.0
-
-
     return gpa
 
+print(grade_to_gpa(5))

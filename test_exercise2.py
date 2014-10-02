@@ -13,9 +13,8 @@ __status__ = "Prototype"
 # imports one per line
 
 # imports one per line
-import exercise1
-from exercise2 import checksum
 
+import exercise2
 
 def test_checksum():
     """

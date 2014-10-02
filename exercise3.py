@@ -15,8 +15,34 @@ __email__ = javeria.tariq@mail.utoronto.ca
 
 def decide_result(player1, player2):
 
-    Possibilities = {}
+    # assign parameters
+    player1_options = "Rock, Paper, Scissors"
+    player2_options = "Rock, Paper, Scissors"
+
+    # check to see if parameter matches
+     if player1 in player1_options:
+         pass
+
+    if player2 in player2_options:
+        pass
 
 
-    return result
+    # all the possible situations when two players choose between rock, paper, scissors
+    P_one = (Rock, Rock)
+    P_two = (Rock, Paper)
+    P_three = (Rock, Scissors)
+    P_four = ()
+    P_five =
+    P_six =
+    P_seven =
+    P_eight =
+    P_nine =
+
+    # the results for all the possible situations from above are summarized in this dictionary
+
+
+
+
+
+    return Results
 

@@ -9,40 +9,40 @@ Example:
     $ python exercise3.py
 """
 
-__author__ = Javeria Tariq
-__email__ = javeria.tariq@mail.utoronto.ca
+__author__ = 'Javeria Tariq'
+__email__ = "javeria.tariq@mail.utoronto.ca"
 
 
 def decide_result(player1, player2):
 
     # assign parameters
-    player1_options = "Rock", "Paper", "Scissors"
-    player2_options = "Rock", "Paper", "Scissors"
+    player1_options = "rock", "paper", "scissors"
+    player2_options = "rock", "paper", "scissors"
 
     # check to see if parameter matches
-     if player1 in player1_options:
-         pass
+    if player1 in player1_options:
+        pass
 
     if player2 in player2_options:
         pass
 
 
     # all the possible situations when two players choose between rock, paper, scissors
-    P_one = (Rock, Rock)
-    P_two = (Rock, Paper)
-    P_three = (Rock, Scissors)
-    P_four = (Paper, Paper)
-    P_five = (Paper, Rock)
-    P_six = (Paper, Scissors)
-    P_seven = (Scissors, Scissors)
-    P_eight = (Scissors, Rock)
-    P_nine = (Scissors, Paper)
+    p_one = ("rock", "rock")
+    p_two = ("rock", "paper")
+    p_three = ("rock", "scissors")
+    p_four = ("paper", "paper")
+    p_five = ("paper", "rock")
+    p_six = ("paper", "scissors")
+    p_seven = ("scissors", "scissors")
+    p_eight = ("scissors", "rock")
+    p_nine = ("scissors", "paper")
 
     # the results for all the possible situations from above are summarized in this dictionary
 
-    Results = {P_one: 0, P_two: 2, P_three: 1, P_four: 0, P_five: 1, P_six: 2, P_seven: 0, P_eight: 2, P_nine: 1}
+    results = {p_one: 0, p_two: 2, p_three: 1, p_four: 0, p_five: 1, p_six: 2, p_seven: 0, p_eight: 2, p_nine: 1}
 
+    return results
 
-
-    return Results
+print (decide_result("rock","paper"))
 

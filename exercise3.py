@@ -16,8 +16,8 @@ __email__ = "javeria.tariq@mail.utoronto.ca"
 def decide_result(player1, player2):
 
     # assign parameters
-    player1_options = "rock", "paper", "scissors"
-    player2_options = "rock", "paper", "scissors"
+    player1_options = 'rock', 'paper', 'scissors'
+    player2_options = 'rock', 'paper', 'scissors'
 
     # check to see if parameter matches
     if player1 in player1_options:
@@ -41,19 +41,18 @@ def decide_result(player1, player2):
     # the results for all the possible situations from above are in this dictionary
     results = {}
 
-    results ['p_one'] = 0
-    results ['p_two'] = 2
-    results ['p_three'] = 1
-    results ['p_four'] = 0
-    results ['p_five'] = 1
-    results ['p_six'] = 2
-    results ['p_seven'] = 0
-    results ['p_eight'] = 2
-    results ['p_nine'] = 1
-    
+    results[p_one] = 0
+    results[p_two] = 2
+    results[p_three] = 1
+    results[p_four] = 0
+    results[p_five] = 1
+    results[p_six] = 2
+    results[p_seven] = 0
+    results[p_eight] = 2
+    results[p_nine] = 1
 
-    if (player1, player2) in options:
-        return options.get(value)
+
+    return results.values()
 
 
 print (decide_result("rock","paper"))

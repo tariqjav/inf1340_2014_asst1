@@ -26,7 +26,8 @@ def decide_result(player1, player2):
     if player2 in player2_options:
         pass
 
-    # all the possible situations when two players choose between rock, paper, scissors
+    # all the possible options when two players choose between rock, paper, scissors
+
     p_one = ("rock", "rock")
     p_two = ("rock", "paper")
     p_three = ("rock", "scissors")
@@ -37,12 +38,22 @@ def decide_result(player1, player2):
     p_eight = ("scissors", "rock")
     p_nine = ("scissors", "paper")
 
+    # the results for all the possible situations from above are in this dictionary
+    results = {}
 
-    # the results for all the possible situations from above are summarized in this dictionary
+    results ['p_one'] = 0
+    results ['p_two'] = 2
+    results ['p_three'] = 1
+    results ['p_four'] = 0
+    results ['p_five'] = 1
+    results ['p_six'] = 2
+    results ['p_seven'] = 0
+    results ['p_eight'] = 2
+    results ['p_nine'] = 1
+    
 
-    results = {"p_one": 0, "p_two": 2, "p_three": 1, "p_four": 0, "p_five": 1, "p_six": 2, "p_seven": 0, "p_eight": 2, "p_nine": 1}
-
-    return results.get(key, default=None)
+    if (player1, player2) in options:
+        return options.get(value)
 
 
 print (decide_result("rock","paper"))

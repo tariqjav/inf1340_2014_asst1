@@ -40,7 +40,7 @@ def decide_result(player1, player2):
 
     # the results for all the possible situations from above are summarized in this dictionary
 
-
+    Results = {P_one: 0, P_two: 2, P_three: 1, P_four: 0, P_five: 1, P_six: 2, P_seven: 0, P_eight: 2, P_nine: 1}
 
 
 

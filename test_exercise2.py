@@ -10,11 +10,9 @@ __license__ = "MIT License"
 
 __status__ = "Prototype"
 
-# imports one per line
-
-# imports one per line
 
 import exercise2
+from exercise2 import checksum
 
 def test_checksum():
     """
@@ -23,21 +21,32 @@ def test_checksum():
     assert checksum("786936224306") is True
     assert checksum("085392132225") is True
     assert checksum("717951000841") is False
-    # other tests
+    assert checksum ("435804790143") is False
+    assert checksum ("823911165203") is False
+    assert checksum ("314439932290") is False
+    assert checksum ("590467329014") is False
+    assert checksum ("671298457041") is False
+    assert checksum ("474365717905") is False
+    assert checksum ("172346155116") is True
 
 
 def test_input():
     """
     Inputs that are the incorrect format and length
     """
-    with exercise1.raises(TypeError):
+    with exercise2.raises(TypeError):
         checksum(1.0)
         checksum(786936224306)
+        checksum(Hello)
+        checksum(444444)
+        checksum(Thisiswrong)
 
-    with exercise1.raises(ValueError):
+    with exercise2.raises(ValueError):
         checksum("1")
         checksum("1234567890")
+        checksum("142323")
+        checksum("42412421341329324")
 
-    # other tests
+
 
 # add functions for any other tests

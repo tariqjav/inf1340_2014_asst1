@@ -21,7 +21,11 @@ def test_checksum():
     assert checksum("786936224306") is True
     assert checksum("085392132225") is True
     assert checksum("717951000841") is False
-    # other tests
+    assert checksum ("435804790143") is False
+    assert checksum ("823911165203") is True
+    assert checksum ("314439932290") is False
+    assert checksum ("590467329014") is False
+    assert checksum ("671298457041") is False
 
 
 def test_input():
@@ -32,6 +36,8 @@ def test_input():
         checksum(1.0)
         checksum(786936224306)
         checksum(Hello)
+        checksum(444444)
+        checksum(Thisiswrong)
 
     with exercise2.raises(ValueError):
         checksum("1")

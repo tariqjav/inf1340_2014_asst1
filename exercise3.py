@@ -54,6 +54,5 @@ def decide_result(player1, player2):
 
     return results.values()
 
-
-print (decide_result("rock","paper"))
+decide_result("rock","paper")
 

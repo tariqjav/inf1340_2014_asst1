@@ -44,10 +44,10 @@ def checksum(upc):
         print("Length error")
         raise ValueError("Length is not 12")
 
-    # convert the string with 12 digits into a list and then into integers
+    # convert the string with 12 digits into a list
     c_upc = list(upc)
 
-    # generate checksum using the first 11 digits provided
+    # generate checksum using the first 11 digits provided, ensuring all strings are converted to integers
     #1. Adding the odd number digits & multiplying by three
     step_one = (int(c_upc[0]) + int(c_upc[2]) + int(c_upc[4]) + int(c_upc[6]) + int(c_upc[8]) + int(c_upc[10]))*3
     #2. Adding the even number digits
@@ -55,19 +55,20 @@ def checksum(upc):
     #3. The result modulo 10
     step_three = step_two % 10
     #4. If result is not 0, subtract from 10
-    checksum = 10 - step_three
+    if step_three != 0:
+        checksum_final = 10 - step_three
 
+    elif step_three == 0:
+        checksum_final = step_three
 
-    # check against the the twelfth digit and return true if equal and false otherwise
-
-    if checksum == int(c_upc[11]):
+    # check against the the twelfth digit and return true if it is equal and false otherwise
+    if checksum_final == int(c_upc[11]):
         value = True
 
-
-    elif checksum != int(c_upc[11]):
+    elif checksum_final != int(c_upc[11]):
         value = False
 
     return value
 
 
-print(checksum("717951000841"))
+print(checksum("823911165203"))

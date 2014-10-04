@@ -46,7 +46,7 @@ def checksum (upc):
 
     # convert string to array
     # hint: use the list function
-     upc = map(int,upc)
+    upc = map(int,upc)
     #Put the string with 12 digits into a list. 
     
     # generate checksum using the first 11 digits provided

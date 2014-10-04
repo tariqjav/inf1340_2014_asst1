@@ -70,4 +70,4 @@ def checksum(upc):
     return value
 
 
-print(checksum("085392132225"))
+print(checksum("717951000841"))

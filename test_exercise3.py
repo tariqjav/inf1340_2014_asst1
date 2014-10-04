@@ -4,7 +4,7 @@ import exercise3
 from exercise3 import decide_result
 
 
-def test_checksum():
+def test_result():
     """
     Inputs that are the correct format and length
     """

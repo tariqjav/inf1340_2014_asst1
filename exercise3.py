@@ -9,8 +9,6 @@ Example:
     $ python exercise3.py
 """
 
-__author__ = Javeria Tariq
-__email__ = javeria.tariq@mail.utoronto.ca
 
 
 def decide_result(player1, player2):
@@ -20,29 +18,33 @@ def decide_result(player1, player2):
     player2_options = "Rock", "Paper", "Scissors"
 
     # check to see if parameter matches
-     if player1 in player1_options:
+    if player1 in player1_options & player2 in player2_options:
          pass
 
-    if player2 in player2_options:
-        pass
+    else:
+     print ("Error")
+    raise TypeError("Invalid type passed as parameter")
 
 
     # all the possible situations when two players choose between rock, paper, scissors
-    P_one = (Rock, Rock)
-    P_two = (Rock, Paper)
-    P_three = (Rock, Scissors)
-    P_four = (Paper, Paper)
-    P_five = (Paper, Rock)
-    P_six = (Paper, Scissors)
-    P_seven = (Scissors, Scissors)
-    P_eight = (Scissors, Rock)
-    P_nine = (Scissors, Paper)
-
-    # the results for all the possible situations from above are summarized in this dictionary
+decide_rps = {}
 
 
+ # the results for all the possible situations from above are summarized in this dictionary
+
+
+decide_rps["Rock", "Rock"] = "0"
+decide_rps["Rock", "Paper"] = "2"
+decide_rps["Rock", "Scissors"] = "1"
+decide_rps["Paper", "Paper"] = "0"
+decide_rps["Paper", "Rock"] = "1"
+decide_rps["Paper", "Scissors"] = "2"
+decide_rps["Scissors", "Scissors"] = "0"
+decide_rps["Scissors", "Rock"] = "2"
+decide_rps["Scissors", "Paper"] = "1"
 
 
 
-    return Results
 
+print ("Rock vs Paper is " + decide_rps["Rock","Paper"])
+print ("Rock vs Rock is " + decide_rps["Rock","Rock"])

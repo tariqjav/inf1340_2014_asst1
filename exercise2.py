@@ -69,6 +69,3 @@ def checksum(upc):
         value = False
 
     return value
-
-
-print(checksum("172346155116"))

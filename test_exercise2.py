@@ -12,7 +12,7 @@ __status__ = "Prototype"
 
 
 import exercise2
-from exercise2 import checksum(upc)
+from exercise2 import checksum
 
 def test_checksum():
     """
@@ -28,12 +28,12 @@ def test_input():
     """
     Inputs that are the incorrect format and length
     """
-    with exercise1.raises(TypeError):
+    with exercise2.raises(TypeError):
         checksum(1.0)
         checksum(786936224306)
         checksum(Hello)
 
-    with exercise1.raises(ValueError):
+    with exercise2.raises(ValueError):
         checksum("1")
         checksum("1234567890")
         checksum("142323")

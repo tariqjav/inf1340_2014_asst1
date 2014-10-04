@@ -49,23 +49,25 @@ def checksum(upc):
 
     # generate checksum using the first 11 digits provided
     #1. Adding the odd number digits & multiplying by three
-    step_one = ((int(c_upc[0]) + int(c_upc[2]) + int(c_upc[4]) + int(c_upc[6]) + int(c_upc [8]) + int(c_upc[10]))*3
+    step_one = (int(c_upc[0]) + int(c_upc[2]) + int(c_upc[4]) + int(c_upc[6]) + int(c_upc[8]) + int(c_upc[10]))*3
     #2. Adding the even number digits
     step_two = step_one + int(c_upc[1])+int(c_upc[3])+int(c_upc[5])+int(c_upc[7])+int(c_upc[9])
     #3. The result modulo 10
     step_three = step_two % 10
     #4. If result is not 0, subtract from 10
-
     checksum = 10 - step_three
 
 
-    # check against the the twelfth digit
-    if checksum == c_upc[11]:
-           return True
-    # return True if they are equal, False otherwise
+    # check against the the twelfth digit and return true if equal and false otherwise
 
-    elif checksum != c_upc[11]:
-        return False
+    if checksum == int(c_upc[11]):
+        value = True
 
 
-print(checksum("786936224306"))
+    elif checksum != int(c_upc[11]):
+        value = False
+
+    return value
+
+
+print(checksum("085392132225"))

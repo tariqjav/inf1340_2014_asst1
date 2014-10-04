@@ -19,7 +19,7 @@ __status__ = "Prototype"
 # imports one per line
 
 
-def checksum (upc):
+def checksum(upc):
     """
     Checks if the digits in a UPC is consistent with checksum
 
@@ -42,27 +42,30 @@ def checksum (upc):
     # raise ValueError if not 12
     if len(upc) is not 12:
         print("Length error")
-        raise ValueError("Length is 12")
+        raise ValueError("Length is not 12")
 
-    # convert string to array
-    # hint: use the list function
-     upc = map(int,upc)
-    #Put the string with 12 digits into a list. 
-    
+    # convert the string with 12 digits into a list and then into integers
+    c_upc = list(upc)
+
     # generate checksum using the first 11 digits provided
-    a1 = upc[0]+upc[2]+upc[4]+upc[6]+upc[8]+upc[10]
-    #1. Adding the odd number digits, and multiple by three.
-    a2 = a1*3 + upc[1]+upc[3]+upc[5]+upc[7]+upc[9]
-    #2. Adding the even number digits.
-    a3 = a2 % 10
-    #3. Calcultating the modulo ten.
-    result = 10 - a3
-    #4. Subtrating by ten and generating the result.
+    #1. Adding the odd number digits & multiplying by three
+    step_one = ((int(c_upc[0]) + int(c_upc[2]) + int(c_upc[4]) + int(c_upc[6]) + int(c_upc [8]) + int(c_upc[10]))*3
+    #2. Adding the even number digits
+    step_two = step_one + int(c_upc[1])+int(c_upc[3])+int(c_upc[5])+int(c_upc[7])+int(c_upc[9])
+    #3. The result modulo 10
+    step_three = step_two % 10
+    #4. If result is not 0, subtract from 10
+
+    checksum = 10 - step_three
+
+
     # check against the the twelfth digit
-    if result == upc[11]:
+    if checksum == c_upc[11]:
            return True
     # return True if they are equal, False otherwise
 
-    return False
+    elif checksum != c_upc[11]:
+        return False
 
-print checksum("786936224306")
+
+print(checksum("786936224306"))

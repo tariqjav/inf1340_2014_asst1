@@ -22,10 +22,12 @@ def test_checksum():
     assert checksum("085392132225") is True
     assert checksum("717951000841") is False
     assert checksum ("435804790143") is False
-    assert checksum ("823911165203") is True
+    assert checksum ("823911165203") is False
     assert checksum ("314439932290") is False
     assert checksum ("590467329014") is False
     assert checksum ("671298457041") is False
+    assert checksum ("474365717905") is False
+    assert checksum ("172346155116") is True
 
 
 def test_input():

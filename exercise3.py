@@ -10,53 +10,43 @@ Example:
 """
 
 
-def decide_result(player1, player2):
+def decide_result(key, key1):
 
     # assign parameters
     player1_options = "Rock", "Paper", "Scissors"
     player2_options = "Rock", "Paper", "Scissors"
 
     # check to see if parameter matches
-    if player1 in player1_options:
+    if key in player1_options:
         pass
 
-    elif player1 != player1_options:
+    elif key != player1_options:
         print("Error")
         raise TypeError("Invalid type passed as parameter")
 
-    if player2 in player2_options:
+    if key1 in player2_options:
         pass
 
-    elif player2 != player2_options:
+    elif key1 != player2_options:
         print("Error")
         raise TypeError("Invalid type passed as parameter")
 
-    # all the possible situations when two players choose between rock, paper, scissors
+    # create a dictionary
     decide_rps = {}
-    p_one = ("Rock", "Rock")
-    p_two = ("Rock", "Paper")
-    p_three = ("Rock", "Scissors")
-    p_four = ("Paper", "Paper")
-    p_five = ("Paper", "Rock")
-    p_six = ("Paper", "Scissors")
-    p_seven = ("Scissors", "Scissors")
-    p_eight = ("Scissors", "Rock")
-    p_nine = ("Scissors", "Paper")
 
     # the results for all the possible situations from above are summarized in this dictionary
 
-    decide_rps[p_one] = "0"
-    decide_rps[p_two] = "2"
-    decide_rps[p_three] = "1"
-    decide_rps[p_four] = "0"
-    decide_rps[p_five] = "1"
-    decide_rps[p_six] = "2"
-    decide_rps[p_seven] = "0"
-    decide_rps[p_eight] = "2"
-    decide_rps[p_nine] = "1"
+    decide_rps["Rock", "Rock"] = "0"
+    decide_rps["Rock", "Paper"] = "2"
+    decide_rps["Rock", "Scissors"] = "1"
+    decide_rps["Paper", "Paper"] = "0"
+    decide_rps["Paper", "Rock"] = "1"
+    decide_rps["Paper", "Scissors"] = "2"
+    decide_rps["Scissors", "Scissors"] = "0"
+    decide_rps["Scissors", "Rock"] = "2"
+    decide_rps["Scissors", "Paper"] = "1"
 
-    for player1, player2 in decide_rps.items():
-        print (player1, player2)
+    for (key, key1), value in decide_rps.items():
+        print((key, key1), value)
 
 
-print(decide_result("Paper","Paper"))

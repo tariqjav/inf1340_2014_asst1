@@ -10,7 +10,6 @@ Example:
 """
 
 
-
 def decide_result(player1, player2):
 
     # assign parameters
@@ -34,19 +33,30 @@ def decide_result(player1, player2):
 
     # all the possible situations when two players choose between rock, paper, scissors
     decide_rps = {}
+    p_one = ("Rock", "Rock")
+    p_two = ("Rock", "Paper")
+    p_three = ("Rock", "Scissors")
+    p_four = ("Paper", "Paper")
+    p_five = ("Paper", "Rock")
+    p_six = ("Paper", "Scissors")
+    p_seven = ("Scissors", "Scissors")
+    p_eight = ("Scissors", "Rock")
+    p_nine = ("Scissors", "Paper")
 
     # the results for all the possible situations from above are summarized in this dictionary
 
-    decide_rps["Rock", "Rock"] = "0"
-    decide_rps["Rock", "Paper"] = "2"
-    decide_rps["Rock", "Scissors"] = "1"
-    decide_rps["Paper", "Paper"] = "0"
-    decide_rps["Paper", "Rock"] = "1"
-    decide_rps["Paper", "Scissors"] = "2"
-    decide_rps["Scissors", "Scissors"] = "0"
-    decide_rps["Scissors", "Rock"] = "2"
-    decide_rps["Scissors", "Paper"] = "1"
+    decide_rps[p_one] = "0"
+    decide_rps[p_two] = "2"
+    decide_rps[p_three] = "1"
+    decide_rps[p_four] = "0"
+    decide_rps[p_five] = "1"
+    decide_rps[p_six] = "2"
+    decide_rps[p_seven] = "0"
+    decide_rps[p_eight] = "2"
+    decide_rps[p_nine] = "1"
+
+    for player1, player2 in decide_rps.items():
+        print (player1, player2)
 
 
-print ("Rock vs Paper is " + decide_result("Rock","Paper"))
-print ("Rock vs Rock is " + decide_result("Rock","Rock"))
+print(decide_result("Paper","Paper"))

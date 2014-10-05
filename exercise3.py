@@ -18,33 +18,35 @@ def decide_result(player1, player2):
     player2_options = "Rock", "Paper", "Scissors"
 
     # check to see if parameter matches
-    if player1 in player1_options & player2 in player2_options:
-         pass
+    if player1 in player1_options:
+        pass
 
-    else:
-     print ("Error")
-    raise TypeError("Invalid type passed as parameter")
+    elif player1 != player1_options:
+        print("Error")
+        raise TypeError("Invalid type passed as parameter")
 
+    if player2 in player2_options:
+        pass
+
+    elif player2 != player2_options:
+        print("Error")
+        raise TypeError("Invalid type passed as parameter")
 
     # all the possible situations when two players choose between rock, paper, scissors
-decide_rps = {}
+    decide_rps = {}
+
+    # the results for all the possible situations from above are summarized in this dictionary
+
+    decide_rps["Rock", "Rock"] = "0"
+    decide_rps["Rock", "Paper"] = "2"
+    decide_rps["Rock", "Scissors"] = "1"
+    decide_rps["Paper", "Paper"] = "0"
+    decide_rps["Paper", "Rock"] = "1"
+    decide_rps["Paper", "Scissors"] = "2"
+    decide_rps["Scissors", "Scissors"] = "0"
+    decide_rps["Scissors", "Rock"] = "2"
+    decide_rps["Scissors", "Paper"] = "1"
 
 
- # the results for all the possible situations from above are summarized in this dictionary
-
-
-decide_rps["Rock", "Rock"] = "0"
-decide_rps["Rock", "Paper"] = "2"
-decide_rps["Rock", "Scissors"] = "1"
-decide_rps["Paper", "Paper"] = "0"
-decide_rps["Paper", "Rock"] = "1"
-decide_rps["Paper", "Scissors"] = "2"
-decide_rps["Scissors", "Scissors"] = "0"
-decide_rps["Scissors", "Rock"] = "2"
-decide_rps["Scissors", "Paper"] = "1"
-
-
-
-
-print ("Rock vs Paper is " + decide_rps["Rock","Paper"])
-print ("Rock vs Rock is " + decide_rps["Rock","Rock"])
+print ("Rock vs Paper is " + decide_result("Rock","Paper"))
+print ("Rock vs Rock is " + decide_result("Rock","Rock"))

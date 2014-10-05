@@ -17,5 +17,5 @@ def test_result():
     assert decide_result("paper", "scissors") == 1
     assert decide_result("scissors", "rock") == 2
     assert decide_result("scissors", "paper") == 1
-    
+
 

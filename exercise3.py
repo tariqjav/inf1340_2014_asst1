@@ -9,50 +9,42 @@ Example:
     $ python exercise3.py
 """
 
-__author__ = 'Javeria Tariq'
-__email__ = "javeria.tariq@mail.utoronto.ca"
 
 
 def decide_result(player1, player2):
 
     # assign parameters
-    player1_options = 'rock', 'paper', 'scissors'
-    player2_options = 'rock', 'paper', 'scissors'
+    player1_options = "Rock", "Paper", "Scissors"
+    player2_options = "Rock", "Paper", "Scissors"
 
     # check to see if parameter matches
-    if player1 in player1_options:
-        pass
+    if player1 in player1_options & player2 in player2_options:
+         pass
 
-    if player2 in player2_options:
-        pass
-
-    # all the possible options when two players choose between rock, paper, scissors
-
-    p_one = ("rock", "rock")
-    p_two = ("rock", "paper")
-    p_three = ("rock", "scissors")
-    p_four = ("paper", "paper")
-    p_five = ("paper", "rock")
-    p_six = ("paper", "scissors")
-    p_seven = ("scissors", "scissors")
-    p_eight = ("scissors", "rock")
-    p_nine = ("scissors", "paper")
-
-    # the results for all the possible situations from above are in this dictionary
-    results = {}
-
-    results[p_one] = 0
-    results[p_two] = 2
-    results[p_three] = 1
-    results[p_four] = 0
-    results[p_five] = 1
-    results[p_six] = 2
-    results[p_seven] = 0
-    results[p_eight] = 2
-    results[p_nine] = 1
+    else:
+     print ("Error")
+    raise TypeError("Invalid type passed as parameter")
 
 
-    return results.values()
+    # all the possible situations when two players choose between rock, paper, scissors
+decide_rps = {}
 
-decide_result("rock","paper")
 
+ # the results for all the possible situations from above are summarized in this dictionary
+
+
+decide_rps["Rock", "Rock"] = "0"
+decide_rps["Rock", "Paper"] = "2"
+decide_rps["Rock", "Scissors"] = "1"
+decide_rps["Paper", "Paper"] = "0"
+decide_rps["Paper", "Rock"] = "1"
+decide_rps["Paper", "Scissors"] = "2"
+decide_rps["Scissors", "Scissors"] = "0"
+decide_rps["Scissors", "Rock"] = "2"
+decide_rps["Scissors", "Paper"] = "1"
+
+
+
+
+print ("Rock vs Paper is " + decide_rps["Rock","Paper"])
+print ("Rock vs Rock is " + decide_rps["Rock","Rock"])

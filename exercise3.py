@@ -32,10 +32,13 @@ def decide_result(player1, player2):
         raise TypeError("Invalid type passed as parameter")
 
     # create a dictionary
-    decide_rps = {}
+    decide_rps = {('Rock', 'Scissors'): '1', ('Scissors', 'Paper'): '1',
+                  ('Rock', 'Rock'): '0', ('Paper', 'Paper'): '0',
+                  ('Rock', 'Paper'): '2', ('Scissors', 'Rock'): '2',
+                  ('Scissors', 'Scissors'): '0', ('Paper', 'Scissors'): '2',
+                  ('Paper', 'Rock'): '1'}
 
     # the results for all the possible situations from above are summarized in this dictionary
-
     decide_rps["Rock", "Rock"] = "0"
     decide_rps["Rock", "Paper"] = "2"
     decide_rps["Rock", "Scissors"] = "1"
@@ -46,8 +49,6 @@ def decide_result(player1, player2):
     decide_rps["Scissors", "Rock"] = "2"
     decide_rps["Scissors", "Paper"] = "1"
 
+    # the method for retrieving the value associated with player1 and player2
     return decide_rps.get((player1,player2), None)
 
-
-
-print(decide_result("Rock", "Rock"))

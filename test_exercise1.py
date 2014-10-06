@@ -36,7 +36,6 @@ def test_letter_grade():
         grade_to_gpa("z")
 
 
-
 def test_percentage_grade():
     """
     Numeric grade inputs

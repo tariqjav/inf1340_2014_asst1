@@ -37,9 +37,8 @@ def test_input():
     with exercise2.raises(TypeError):
         checksum(1.0)
         checksum(786936224306)
-        checksum(Hello)
         checksum(444444)
-        checksum(Thisiswrong)
+
 
     with exercise2.raises(ValueError):
         checksum("1")

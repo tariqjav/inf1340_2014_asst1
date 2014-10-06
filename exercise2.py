@@ -16,8 +16,6 @@ __license__ = "MIT License"
 
 __status__ = "Prototype"
 
-# imports one per line
-
 
 def checksum(upc):
     """
@@ -69,3 +67,5 @@ def checksum(upc):
         value = False
 
     return value
+
+print (checksum("172346155116"))

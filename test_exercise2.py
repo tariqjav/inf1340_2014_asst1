@@ -14,6 +14,7 @@ __status__ = "Prototype"
 import exercise2
 from exercise2 import checksum
 
+
 def test_checksum():
     """
     Inputs that are the correct format and length

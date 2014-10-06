@@ -16,16 +16,18 @@ def decide_result(player1, player2):
     player1_options = "Rock", "Paper", "Scissors"
     player2_options = "Rock", "Paper", "Scissors"
 
-    # check to see if parameter matches
-    if player1 in player1_options:
-        pass
+    # check to see if values are a string and if they match parameters
+
+    if player1 is not str:
+        raise ValueError("Invalid value passed as parameter")
 
     elif player1 != player1_options:
         print("Error")
         raise TypeError("Invalid type passed as parameter")
 
-    if player2 in player2_options:
-        pass
+
+    if player2 is not str:
+        raise ValueError("Invalid value passed as parameter")
 
     elif player2 != player2_options:
         print("Error")
@@ -48,3 +50,4 @@ def decide_result(player1, player2):
     # the method for retrieving the value associated with player1 and player2
     return decide_rps.get((player1,player2), None)
 
+print(decide_result("orange","black"))

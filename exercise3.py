@@ -8,6 +8,7 @@ The program returns 0 for tie, 1 if player 1 wins and 2 if player 2 wins.
 Example:
     $ python exercise3.py
 """
+__author__ = 'Javeria Tariq and Zhong Yang'
 
 
 def decide_result(player1, player2):

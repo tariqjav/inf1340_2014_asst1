@@ -39,7 +39,6 @@ def test_input():
         checksum(786936224306)
         checksum(444444)
 
-
     with exercise2.raises(ValueError):
         checksum("1")
         checksum("1234567890")

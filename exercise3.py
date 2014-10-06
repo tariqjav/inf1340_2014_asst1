@@ -50,4 +50,3 @@ def decide_result(player1, player2):
     # the method for retrieving the value associated with player1 and player2
     return decide_rps.get((player1,player2), None)
 
-print(decide_result("orange","black"))

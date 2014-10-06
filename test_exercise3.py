@@ -25,7 +25,12 @@ def test_input():
     """
     with exercise3.raises(TypeError):
         decide_result(1,3)
-        decide_result("orange", "black")
-        decide_result("Hello", 241)
+        decide_result(1.60414, 13414)
+        decide_result(.0000414, 241)
         decide_result(444444)
-        decide_result("This_is_wrong")
+
+    with exercise3.raises(ValueError):
+        decide_result("orange","black")
+        decide_result("dog", "cat")
+        decide_result("bottle", "water")
+        decide_result("apple","computer")

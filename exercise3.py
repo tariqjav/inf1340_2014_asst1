@@ -10,24 +10,24 @@ Example:
 """
 
 
-def decide_result(key, key1):
+def decide_result(player1, player2):
 
     # assign parameters
     player1_options = "Rock", "Paper", "Scissors"
     player2_options = "Rock", "Paper", "Scissors"
 
     # check to see if parameter matches
-    if key in player1_options:
+    if player1 in player1_options:
         pass
 
-    elif key != player1_options:
+    elif player1 != player1_options:
         print("Error")
         raise TypeError("Invalid type passed as parameter")
 
-    if key1 in player2_options:
+    if player2 in player2_options:
         pass
 
-    elif key1 != player2_options:
+    elif player2 != player2_options:
         print("Error")
         raise TypeError("Invalid type passed as parameter")
 
@@ -46,7 +46,8 @@ def decide_result(key, key1):
     decide_rps["Scissors", "Rock"] = "2"
     decide_rps["Scissors", "Paper"] = "1"
 
-    for (key, key1), value in decide_rps.items():
-        print((key, key1), value)
+    return decide_rps.get((player1,player2), None)
 
 
+
+print(decide_result("Rock", "Rock"))

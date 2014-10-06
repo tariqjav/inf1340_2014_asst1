@@ -101,7 +101,7 @@ def grade_to_gpa(grade):
 
         # assign the value to letter_grade
         if grade == "A+":
-             gpa = 4.0
+            gpa = 4.0
 
         elif grade == "A":
             gpa = 4.0
@@ -122,7 +122,7 @@ def grade_to_gpa(grade):
             gpa = 0.0
     else:
         # raise a TypeError exception
-        print ("Error")
+        print("Error")
 
         raise TypeError("Invalid type passed as parameter")
 

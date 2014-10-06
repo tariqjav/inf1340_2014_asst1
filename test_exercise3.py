@@ -25,12 +25,29 @@ def test_input():
     """
     with exercise3.raises(TypeError):
         decide_result(1,3)
+
+    with exercise3.raises(TypeError):
         decide_result(1.60414, 13414)
+
+    with exercise3.raises(TypeError):
         decide_result(.0000414, 241)
+
+    with exercise3.raises(TypeError):
         decide_result(444444)
 
+
+def test_input():
+    """
+    Inputs that have an invalid value
+    """
     with exercise3.raises(ValueError):
         decide_result("orange","black")
+
+    with exercise3.raises(ValueError):
         decide_result("dog", "cat")
+
+    with exercise3.raises(ValueError):
         decide_result("bottle", "water")
+
+    with exercise3.raises(ValueError):
         decide_result("apple","computer")

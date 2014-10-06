@@ -37,13 +37,28 @@ def test_input():
     """
     with exercise2.raises(TypeError):
         checksum(1.0)
+
+    with exercise2.raises(TypeError):
         checksum(786936224306)
+
+    with exercise2.raises(TypeError):
         checksum(444444)
 
+
+def test_input():
+    """
+    Inputs that have an invalid value
+    """
     with exercise2.raises(ValueError):
         checksum("1")
+
+    with exercise2.raises(ValueError):
         checksum("1234567890")
+
+    with exercise2.raises(ValueError):
         checksum("142323")
+
+    with exercise2.raises(ValueError):
         checksum("42412421341329324")
 
 

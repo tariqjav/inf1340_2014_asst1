@@ -83,7 +83,11 @@ def test_float_input():
     """
     with exercise1.raises(TypeError):
         grade_to_gpa(82.5)
+
+    with exercise1.raises(TypeError):
         grade_to_gpa(-30.07)
+
+    with exercise1.raises(TypeError):
         grade_to_gpa(50600)
 
 
@@ -94,6 +98,10 @@ def test_string_input():
     """
     with exercise1.raises(ValueError):
         grade_to_gpa("Sentences")
+
+    with exercise1.raises(ValueError):
         grade_to_gpa("This is")
+
+    with exercise1.raises(ValueError):
         grade_to_gpa("Invalid")
 

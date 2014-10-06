@@ -32,11 +32,7 @@ def decide_result(player1, player2):
         raise TypeError("Invalid type passed as parameter")
 
     # create a dictionary
-    decide_rps = {('Rock', 'Scissors'): '1', ('Scissors', 'Paper'): '1',
-                  ('Rock', 'Rock'): '0', ('Paper', 'Paper'): '0',
-                  ('Rock', 'Paper'): '2', ('Scissors', 'Rock'): '2',
-                  ('Scissors', 'Scissors'): '0', ('Paper', 'Scissors'): '2',
-                  ('Paper', 'Rock'): '1'}
+    decide_rps = dict()
 
     # the results for all the possible situations from above are summarized in this dictionary
     decide_rps["Rock", "Rock"] = "0"
